@@ -17,28 +17,6 @@ string shapeFinder(const vector<Point>& contour)
         Rect rect = boundingRect(approx);
         return "rectangle";
     }
-
-    /*
-    if (approx.size() <= 3)
-    {
-        return "triangle";
-    }
-    else if (approx.size() == 4)
-    {
-        Rect rect = boundingRect(approx);
-        return "rectangle";
-    }
-    else if (approx.size() > 4)
-    {
-        double area = contourArea(contour);
-        double perimeter = arcLength(contour, true);
-        double circularity = 4 * CV_PI * area / (perimeter * perimeter);
-        if (circularity > 0.5)
-        {
-            return "circle";
-        }
-    }
-    */
     return "???";
 }
 
